@@ -19,6 +19,7 @@ Below is an example of how the action can be used
     docker_login_password: ${{ secrets.DOCKER_REPO_PASSWORD }}
     docker_login_user: ${{ secrets.DOCKER_REPO_USERNAME }}
     docker_login_registry : ${{ steps.login-ecr.outputs.registry }}
+    image_prune: true
     args: -p myapp up -d
 ```
 
@@ -66,6 +67,10 @@ The password for the container repository user.
 ### `docker_login_registry`
 
 The docker container registry to authenticate against
+
+### `image_prune`
+
+Remove all dangling images to save storage space. Default is false
 
 ## License
 

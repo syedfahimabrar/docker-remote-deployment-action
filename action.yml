@@ -14,6 +14,9 @@ inputs:
   args:
     description: Deployment command args.
     required: true
+  image_prune:
+    description: Remove all dangling images to save storage space. Default is false
+    required: false
   stack_file_name:
     description: Docker stack file used. Default is docker-compose.yaml
     required: false
